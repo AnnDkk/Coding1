@@ -81,7 +81,7 @@ Combined with the geometry of the app library, I made my own texture material.
 >>I changed different materials based on the characteristics of the graphics and the direction of rotation.
 
 <div align=center>
-<img src="https://github.com/AnnDkk/Coding1/blob/main/beijing11.png" width="300" height="300">         <img src="https://github.com/AnnDkk/Coding1/blob/main/beijing12.png" width="300" height="300">          <img src="https://github.com/AnnDkk/Coding1/blob/main/beijing123.png" width="300" height="300">
+<img src="https://github.com/AnnDkk/Coding1/blob/main/beijing11.png" width="300" height="300">      <img src="https://github.com/AnnDkk/Coding1/blob/main/beijing12.png" width="300" height="300">        <img src="https://github.com/AnnDkk/Coding1/blob/main/beijing123.png" width="300" height="300">
 </div>
 
 >Setting the camera field of view and geometry size.
