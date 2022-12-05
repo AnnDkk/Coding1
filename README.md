@@ -1,5 +1,8 @@
 # Coding One-Final project 
 The Persistence-by Ann
+<div align=center>
+<img src="https://github.com/AnnDkk/Coding1/blob/main/IMG_9873.jpg" width="900" height="500">
+</div>
 ## Introduction
 This project shapes multiple three-dimensional rotating Spaces through multiple processing of 2D images and 3D Spaces. At the same time, the interactive sound bed and ethereal music are combined to create a sense of fatalism of infinite reincarnation.
 
@@ -102,7 +105,5 @@ function draw() {
 
 ## Achievements
 >By rolling the mouse pulley, users can enter different levels of space experience and experience different spatial effects. In addition, the sound changes as the mouse moves.
-<div align=center>
-<img src="https://github.com/AnnDkk/Coding1/blob/main/IMG_9873.jpg" width="900" height="500">
-</div>
+<img src="https://github.com/AnnDkk/Coding1/blob/main/IMG_9873.jpg" width="500" height="300"><img src="https://github.com/AnnDkk/Coding1/blob/main/IMG_9873.jpg" width="500" height="300">
 * Project Video:
