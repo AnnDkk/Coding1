@@ -8,8 +8,9 @@ The Persistence-by Ann
 This project shapes multiple three-dimensional rotating Spaces through multiple processing of 2D images and 3D Spaces. At the same time, the interactive sound bed and ethereal music are combined to create a sense of fatalism of infinite reincarnation.
 
 ## Documentation
-JavaScript
+* JavaScript
 MIMIC：https://mimicproject.com/code/f30862bd-cab5-84e1-a098-2e919f3616cc
+* Project Video: https://youtu.be/BZaGAetAQDs
 
 ## Code Application
 *  maxiOsc
@@ -121,4 +122,5 @@ function draw() {
 <img src="https://github.com/AnnDkk/Coding1/blob/main/IMG_9883.jpg" width="400" height="250">               <img src="https://github.com/AnnDkk/Coding1/blob/main/IMG_9887.jpg" width="400" height="250">
 </div>
 
-* Project Video:https://youtu.be/BZaGAetAQDs
+
+* Project Video: https://youtu.be/BZaGAetAQDs
