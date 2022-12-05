@@ -1,0 +1,213 @@
+=<html>
+
+  <head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+  .div_foot {
+    position: absolute;
+    height: 50px;
+    text-align: center;
+    line-height: 40px;
+    width: 100%;
+    color: #Fb7399;
+  }
+  </style>
+
+</head>
+
+<head>
+  <script src = "https://mimicproject.com/libs/maximilian.js"></script>
+ <script src = "https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+  <script src = "orbitControls.js"></script>
+   <script src = "https://mimicproject.com/libs/maximilian.js">
+  
+  </script>
+  
+	<meta charset="utf-8">
+	<style>
+		body {			margin: 0px;
+			background-color: #000000;
+			overflow: hidden;
+		}
+	</style>
+</head>
+
+<body>
+    <div class="div_foot">Explore ¡®The Persistence¡¯ with the mouse wheel</div>
+	<script>
+      
+      
+      
+	var camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 10000); 
+  
+	var camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 1, 10000); 
+
+	var scene = new THREE.Scene();
+	var geometry = new THREE.BoxGeometry(-300, -20000, -300);
+    var geometry2 = new THREE.BoxGeometry(-1000, -500, -500);
+  var geometry3 = new THREE.BoxGeometry(-1000, -800, -1500);
+	var myTextureLoader = new THREE.TextureLoader();
+    var myTextureLoader2 = new THREE.TextureLoader();
+    var myTextureLoader3 = new THREE.TextureLoader();
+      
+	var myTexture = myTextureLoader.load('beijing11.png');
+      var myTexture2 = myTextureLoader.load('beijing12.png');
+      var myTexture3 = myTextureLoader.load('beijing12.png');
+   
+      
+	var material = new THREE.MeshBasicMaterial({map: myTexture});
+    var material2 = new THREE.MeshBasicMaterial({map: myTexture2});
+      var material3 = new THREE.MeshBasicMaterial({map: myTexture3});
+    
+      
+    var mesh = new THREE.Mesh(geometry, material);
+      var mesh2 = new THREE.Mesh(geometry2, material2);
+     var mesh3 = new THREE.Mesh(geometry3, material3);
+
+      
+	var light = new THREE.DirectionalLight("rgb(255,255,255)");
+      var light2 = new THREE.DirectionalLight("rgb(255,255,255)");
+      var light3 = new THREE.DirectionalLight("rgb(255,255,255)");
+  
+      
+	var renderer = new THREE.WebGLRenderer();
+      var renderer2 = new THREE.WebGLRenderer();
+      var renderer3 = new THREE.WebGLRenderer();
+     
+	camera.position.z = 1300;
+
+	light.position.set(2,2,2);
+      light2.position.set(10,10,10);
+      light3.position.set(10,10,10);
+     
+	scene.add(mesh);
+	scene.add(light);
+      scene.add(mesh2);
+	scene.add(light2);
+      scene.add(mesh3);
+	scene.add(light3);
+
+      renderer.setPixelRatio(window.devicePixelRatio);
+
+	renderer.setSize(window.innerWidth, window.innerHeight);
+
+	document.body.appendChild(renderer.domElement);
+
+	window.addEventListener('resize', onWindowResize, false); 
+    var controls = new THREE.OrbitControls (camera, renderer.domElement);
+    
+function draw() {
+  
+mesh.rotation.z-=200;
+  mesh2.rotation.y-= 100;
+  mesh3.rotation.y+= 100;
+ 
+  camera.position.x += 0.03;
+    controls.update();
+	renderer.render(scene, camera);
+	requestAnimationFrame(draw);
+}
+     
+function onWindowResize() {
+	camera.aspect = window.innerWidth / 		window.innerHeight;
+	camera.updateProjectionMatrix();
+	renderer.setSize(window.innerWidth, window.innerHeight);
+}    
+
+requestAnimationFrame(draw());
+	</script>
+  
+  
+  
+  <script type="text/javascript">
+
+   var changeThis = 1;
+   var maximJs = maximilian();
+   var maxiAudio = new maximJs.maxiAudio();
+   
+   maxiAudio.init();
+    var osc1 = new maximJs.maxiOsc();
+    var osc2 = new maximJs.maxiOsc();
+    var osc3 = new maximJs.maxiOsc();
+    var osc4 = new maximJs.maxiOsc();
+    var drawOutput = new Array(1024);
+    var counter = 0;
+
+    var canvas = document.querySelector("canvas");
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var context = canvas.getContext("2d");
+    canvas.setAttribute("width", width);
+    canvas.setAttribute("height", height);
+    
+    
+    var mouseX =200;
+    var mouseY =200;
+  
+    var spacing = ((Math.PI * 2) / 1024);
+    var size =300;
+  	var position = height/2;
+    var bufferFreq=44100/1024;
+
+    
+maxiAudio.play = function() {
+        var wave = osc1.sinewave(98 + (osc2.sinewave(10) * 20)) * osc3.sinewave(0.01*mouseX) + osc4.sinewave(88 + (osc2.sinewave(1) * 5)) * osc3.sinewave(0.01);
+  var wave1 = osc1.sinewave(98 + (osc2.sinewave(10) * 20)) * osc3.sinewave(0.01*mouseY/20) + osc4.sinewave(88 + (osc2.sinewave(1) * 5)) * osc3.sinewave(0.01);
+  
+        counter++;
+        drawOutput[counter % 1024] = wave;
+        return wave * 0.4;
+};
+
+canvas.addEventListener('mousemove', getMouse, false);
+
+        function getMouse(mousePosition) {
+                mouseX = mousePosition.layerX;
+                mouseY = mousePosition.layerY;
+        }
+  
+
+</script>
+  <script language="javascript" type="text/javascript">
+  
+  
+    
+    
+    
+  var counter = 0;
+  let maxi = maximilian();
+  let audio = new maxi.maxiAudio();
+  let mySample = new maxi.maxiSample();
+  var myClock = new maxi.maxiClock();
+  let ticks = 4;
+
+  audio.init();
+  
+  audio.loadSample('apple.wav',mySample); 
+function song(){
+  var out = 0;
+  var a = myClock.playHead+1;
+    myClock.ticker();
+  
+  if (myClock.tick) {
+            
+    			console.log(a);
+        }
+
+    out += mySample.play(1);
+    
+    return out ;
+  }
+  audio.play = function() {
+
+      return song();
+       
+	}
+  
+  
+</script>
+  
+</body>
+
+</html>
