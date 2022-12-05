@@ -103,5 +103,5 @@ function draw() {
 ## Achievements
 >By rolling the mouse pulley, users can enter different levels of space experience and experience different spatial effects. In addition, the sound changes as the mouse moves.
 
-<img src="https://github.com/AnnDkk/Coding1/blob/main/beijing11.png" width="300" height="300">         <img src="https://github.com/AnnDkk/Coding1/blob/main/beijing12.png" width="300" height="300">          <img src="https://github.com/AnnDkk/Coding1/blob/main/beijing123.png" width="300" height="300">
+<img src="https://github.com/AnnDkk/Coding1/blob/main/beijing11.png" width="800" height="500">
 * Project Video:
