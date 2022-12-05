@@ -28,7 +28,8 @@ MIMIC：https://mimicproject.com/code/f30862bd-cab5-84e1-a098-2e919f3616cc
     var drawOutput = new Array(1024);
     var counter = 0;
 ```
->Using mouse position to control sound allows users to have a better interactive experience
+>Using the output of a sinewave oscillator to control the frequency of anothe. Then, by setting frequency, amplitude and modulation index, the four waveforms are synthesized into a harmonious sound bed.
+>>In addition, using mouse position to control sound allows users to have a better interactive experience.
 ```
 maxiAudio.play = function() {
         var wave = osc1.sinewave(98 + (osc2.sinewave(10) * 20)) * osc3.sinewave(0.01*mouseX) + osc4.sinewave(88 + (osc2.sinewave(1) * 5)) * osc3.sinewave(0.01);
@@ -41,8 +42,8 @@ maxiAudio.play = function() {
 
 
 * maxiClock
->Use the sequencing clock to change the beat to adjust the audio playback rate.
->Run the "maxiClock.ticker()" method in the "play" function of maxmilian.
+>Using the sequencing clock to change the beat to adjust the audio playback rate.
+>Running the "maxiClock.ticker()" method in the "play" function of maxmilian.
 ```
  var counter = 0;
   let maxi = maximilian();
@@ -82,7 +83,7 @@ Combined with the geometry of the app library, I made my own texture material.
 <img src="https://github.com/AnnDkk/Coding1/blob/main/beijing11.png" width="300" height="300">         <img src="https://github.com/AnnDkk/Coding1/blob/main/beijing12.png" width="300" height="300">          <img src="https://github.com/AnnDkk/Coding1/blob/main/beijing123.png" width="300" height="300">
 </div>
 
->Set the camera field of view and geometry size.
+>Setting the camera field of view and geometry size.
 >>To transform the multiple relationships between the graphics, I backmapped the texture of the material to create multiple skyboxes.
 
 ```
@@ -95,7 +96,7 @@ Combined with the geometry of the app library, I made my own texture material.
   var geometry3 = new THREE.BoxGeometry(-1000, -800, -1500);
 ```
 
->Set the rotation function for different directions and speeds.
+>Setting the rotation function for different directions and speeds.
 >>By changing the speed and camera Angle to get different visual space
 ```
 function draw() {
@@ -111,7 +112,7 @@ function draw() {
 }
 ```
 
->I use high rotation speed to create different scenes through the visual retention characteristics of human eyes.
+>Using high rotation speed to create different scenes through the visual retention characteristics of human eyes.
 
 ## Achievements
 >By rolling the mouse pulley, users can enter different levels of space experience and experience different spatial effects. In addition, the sound changes as the mouse moves.
